@@ -3,6 +3,6 @@ const { FormText } = Forms;
 
 export default () => (
     <FormText>
-        Whatever this is
+        No settings for now
     </FormText>
 )
