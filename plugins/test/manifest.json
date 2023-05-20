@@ -1,0 +1,14 @@
+{
+    "name": "Test plugin",
+    "description": "Do not install this",
+    "authors": [
+        {
+            "name": "Mikicrep",
+            "id": "930762648180650014"
+        }
+    ],
+    "main": "src/index.ts",
+    "vendetta": {
+        "icon": "ic_badge_staff"
+    }
+}

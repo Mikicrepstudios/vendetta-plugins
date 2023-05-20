@@ -3,10 +3,10 @@ import Settings from "./Settings";
 
 export default {
     onLoad: () => {
-        logger.log("Hello world!");
+        logger.log("[Mikicrep test]: loaded");
     },
     onUnload: () => {
-        logger.log("Goodbye, world.");
+        logger.log("[Mikicrep test] unloaded");
     },
     settings: Settings,
 }
