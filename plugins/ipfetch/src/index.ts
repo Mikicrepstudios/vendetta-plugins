@@ -1,7 +1,7 @@
 import Settings from "./Settings";
 import { HttpClient } from '@angular/common/http';
 
-export default class {
+export default class ipfetch {
 	constructor(public http: HttpClient) {}
 
 	onLoad() {
