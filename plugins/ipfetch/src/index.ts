@@ -14,7 +14,7 @@ export default class {
 			const url1 = "http://ip-api.com/json/" + ipaddr;
 
 
-			this.http.get(url1, data).subscribe(
+			this.http.get(url1).subscribe(
 				data => {
 					sendEphemeralClydeMessage(ctx.channel.id, data);
       				},
