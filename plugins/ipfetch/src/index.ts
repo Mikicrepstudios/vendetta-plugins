@@ -2,9 +2,11 @@ import Settings from "./Settings";
 import { HttpClient } from '@angular/common/http';
 
 export default class ipfetch {
-	constructor(public http: HttpClient) {}
+	constructor(public http: HttpClient) {
+		this.settings = new Settings();
+	}
 
-	onLoad() {
+	onLoad(vendetta) {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
 
@@ -40,6 +42,4 @@ export default class ipfetch {
 		});
 	
 	}
-
-	settings: Settings;
 };
