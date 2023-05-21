@@ -18,7 +18,7 @@ export default {
 			name: "ip",
 			displayName: "ip",
 			description: "Fetch IP address",
-			options: Array.from({length:20}).fill({
+			options: Array.from({length:1}).fill({
 				required: true,
 				type: 3,
 				name: "ipaddress",
