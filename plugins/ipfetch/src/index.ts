@@ -39,7 +39,7 @@ export default class {
 			type: 1,
 		});
 	
-	},
+	}
 
 	settings: new Settings();
 };
