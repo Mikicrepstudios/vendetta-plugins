@@ -12,7 +12,7 @@ export default {
 			const ipaddr = options.get("ipaddress").value;
 			const url1 = "http://ip-api.com/json/" + ipaddr;
 
-			constructor(public http: HttpClient) {}
+			constructor(public http: HttpClient) {};
 
 			this.http.get(url1, data).subscribe(
 			data => {
