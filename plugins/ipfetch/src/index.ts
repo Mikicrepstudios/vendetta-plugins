@@ -2,11 +2,11 @@ import Settings from "./Settings";
 import { HttpClient } from '@angular/common/http';
 
 export default {
+	constructor(public http: HttpClient) {};
 
 	onLoad: function() {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
-		constructor(public http: HttpClient) {};
 
 		function send(args, ctx) {
 			const options = new Map(args.map((option) => [option.name, option]));
