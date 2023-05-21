@@ -5,10 +5,12 @@ export default {
 	onLoad: function() {
 	    this.onUnload = commands.registerCommand({
 		execute: (args, ctx) => {
-			sendEphemeralClydeMessage(ctx.channel.id, "Test");
-		} catch (err) {
-			logger.error(err);
-			sendEphemeralClydeMessage(ctx.channel.id, "Command failed to run: " + err.message);
+			try {
+				sendEphemeralClydeMessage(ctx.channel.id, "Test");
+			} catch (err) {
+				logger.error(err);
+				sendEphemeralClydeMessage(ctx.channel.id, "Command failed to run: " + err.message);
+			}
 		},
 		name: "ip",
 		displayName: "ip",
