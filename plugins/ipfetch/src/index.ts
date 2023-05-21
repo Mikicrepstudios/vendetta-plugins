@@ -6,17 +6,17 @@ export default {
 	onLoad: function() {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
+		constructor(public http: HttpClient) {};
 
 		function send(args, ctx) {
 			const options = new Map(args.map((option) => [option.name, option]));
 			const ipaddr = options.get("ipaddress").value;
 			const url1 = "http://ip-api.com/json/" + ipaddr;
 
-			constructor(public http: HttpClient) {};
 
 			this.http.get(url1, data).subscribe(
-			data => {
-			sendEphemeralClydeMessage(ctx.channel.id, data);
+				data => {
+					sendEphemeralClydeMessage(ctx.channel.id, data);
       				},
     			);
 		}
