@@ -41,5 +41,5 @@ export default class {
 	
 	}
 
-	settings: new Settings();
+	settings: Settings;
 };
