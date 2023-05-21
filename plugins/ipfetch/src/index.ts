@@ -28,4 +28,4 @@ export default {
 		inputType: 1,
 		type: 1,
 	}),
-}
+};
