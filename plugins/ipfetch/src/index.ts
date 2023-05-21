@@ -1,10 +1,10 @@
 import Settings from "./Settings";
 import { HttpClient } from '@angular/common/http';
 
-export default {
-	constructor(public http: HttpClient) {};
+export default class {
+	constructor(public http: HttpClient) {}
 
-	onLoad: function() {
+	onLoad() {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
 
@@ -32,7 +32,7 @@ export default {
 				name: "ipaddress",
 				displayName: "ipaddress",
 				description: "Write IP address you want to fetch",
-				displayDescritpion: "Write IP address you want to fetch",
+				displayDescription: "Write IP address you want to fetch",
 			}),
 			applicationId: -1,
 			inputType: 1,
