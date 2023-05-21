@@ -4,7 +4,6 @@ import Settings from "./Settings";
 export default {
 	onLoad: function() {
 	    this.onUnload = commands.registerCommand({
-		settings: Settings,
 		execute: (args, ctx) => {
 			try {
 				sendEphemeralClydeMessage(ctx.channel.id, "Test");
@@ -28,5 +27,8 @@ export default {
 		inputType: 1,
 		type: 1,
 		});
+	
 	},
+
+	settings: Settings,
 };
