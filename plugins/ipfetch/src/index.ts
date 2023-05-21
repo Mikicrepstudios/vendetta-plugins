@@ -6,15 +6,13 @@ export default {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
 
+		function send(args, ctx) {
+			const options = new Map(args.map((option) => [option.name, option]));
+			const ipaddr = options.get("ipaddress").value
+			sendEphemeralClydeMessage(ctx.channel.id, ipaddr);
+
 		this.onUnload = commands.registerCommand({
-			execute: (args, ctx) => {
-				try {
-					sendEphemeralClydeMessage(ctx.channel.id, "Test");
-				} catch (err) {
-					logger.error(err);
-					sendEphemeralClydeMessage(ctx.channel.id, "Command failed to run: " + err.message);
-				}
-			},
+			execute: send,
 			name: "ip",
 			displayName: "ip",
 			description: "Fetch IP address",
