@@ -8,8 +8,9 @@ export default {
 
 		function send(args, ctx) {
 			const options = new Map(args.map((option) => [option.name, option]));
-			const ipaddr = options.get("ipaddress").value
+			const ipaddr = options.get("ipaddress").value;
 			sendEphemeralClydeMessage(ctx.channel.id, ipaddr);
+		}
 
 		this.onUnload = commands.registerCommand({
 			execute: send,
