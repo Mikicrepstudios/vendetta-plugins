@@ -27,5 +27,6 @@ export default {
 		applicationId: -1,
 		inputType: 1,
 		type: 1,
-	}),
+		});
+	},
 };
