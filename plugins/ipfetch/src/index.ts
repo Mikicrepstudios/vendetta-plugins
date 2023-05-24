@@ -1,11 +1,7 @@
 import Settings from "./Settings";
-import { HttpClient } from '@angular/common/http';
+import axios from 'axios';
 
 export default  {
-	constructor(public http: HttpClient) {
-	
-	}
-
 	onLoad: () => {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
@@ -15,12 +11,9 @@ export default  {
 			const ipaddr = options.get("ipaddress").value;
 			const url1 = "http://ip-api.com/json/" + ipaddr;
 
-
-			this.http.get(url1).subscribe(
-				data => {
-					sendEphemeralClydeMessage(ctx.channel.id, data);
-      				},
-    			);
+			axios.get(url1).then((response) = > {
+				sendEphemeralClydeMessage(ctx.channel.id, response.data);	
+			});
 		}
 
 		this.onUnload = commands.registerCommand({
