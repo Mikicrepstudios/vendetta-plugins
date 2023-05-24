@@ -11,7 +11,8 @@ export default  {
 			const ipaddr = options.get("ipaddress").value;
 			const url1 = "http://ip-api.com/json/" + ipaddr;
 
-			axios.get(url1).then((response) = > {
+			axios.get(url1)
+			.then((response) => {
 				sendEphemeralClydeMessage(ctx.channel.id, response.data);	
 			});
 		}
