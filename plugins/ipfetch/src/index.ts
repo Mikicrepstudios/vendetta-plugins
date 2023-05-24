@@ -1,9 +1,9 @@
 import Settings from "./Settings";
 import { HttpClient } from '@angular/common/http';
 
-export default class ipfetch {
+export default  {
 	constructor(public http: HttpClient) {
-		this.settings = new Settings();
+	
 	}
 
 	onLoad(vendetta) {
@@ -41,5 +41,7 @@ export default class ipfetch {
 			type: 1,
 		});
 	
-	}
+	},
+
+	settings: Settings,
 };
