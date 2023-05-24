@@ -1,5 +1,4 @@
 import Settings from "./Settings";
-import axios from 'axios';
 
 export default  {
 	onLoad: () => {
@@ -10,12 +9,16 @@ export default  {
 			const options = new Map(args.map((option) => [option.name, option]));
 			const ipaddr = options.get("ipaddress").value;
 			const url1 = "http://ip-api.com/json/" + ipaddr;
-
-			axios.get(url1)
-			.then((response) => {
-				sendEphemeralClydeMessage(ctx.channel.id, response.data);	
-			});
+			fetch(url1)
+			.then((res) => res.json())
+			.then((json) => {
+				sendEphemeralClydeMessage(ctx.channel.id, JSON.stringify(json, 0, 4));
+			})
+			.catch(error => {
+    				console.error('[Mikicrep ipfetch]: error occured: ', error);
+			}
 		}
+	
 
 		this.onUnload = commands.registerCommand({
 			execute: send,
@@ -33,8 +36,7 @@ export default  {
 			applicationId: -1,
 			inputType: 1,
 			type: 1,
-		});
-	
+		});	
 	},
 
 	settings: Settings,
