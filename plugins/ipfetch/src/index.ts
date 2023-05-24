@@ -6,7 +6,7 @@ export default  {
 	
 	}
 
-	onLoad(vendetta) {
+	onLoad: () => {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
 
