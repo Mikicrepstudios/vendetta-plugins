@@ -16,8 +16,8 @@ export default  {
 			})
 			.catch(error => {
     				console.error('[Mikicrep ipfetch]: error occured: ', error);
-			};
-		}
+			},
+		};
 	
 
 		this.onUnload = commands.registerCommand({
