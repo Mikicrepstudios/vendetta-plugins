@@ -1,7 +1,7 @@
 import Settings from "./Settings";
 
 export default  {
-	onLoad: () {
+	onLoad() {
 		const { metro, commands, logger } = vendetta;
 		const { sendBotMessage: sendEphemeralClydeMessage } = metro.findByProps("sendBotMessage");
 
