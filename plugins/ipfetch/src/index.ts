@@ -12,7 +12,7 @@ export default  {
 			fetch(url1)
 			.then((res) => res.json())
 			.then((json) => {
-				sendEphemeralClydeMessage(ctx.channel.id, "```json\n" JSON.stringify(json, 0, 4) + "```");
+				sendEphemeralClydeMessage(ctx.channel.id, "```json\n" + JSON.stringify(json, 0, 4) + "```");
 			})
 			.catch(error => {
     				console.error('[Mikicrep ipfetch]: error occured: ', error);
