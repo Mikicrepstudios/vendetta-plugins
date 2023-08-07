@@ -1,6 +1,6 @@
 {
-    "name": "IP Fetch plugin",
-    "description": "Plugin which helps you obtain information from specific IP address",
+    "name": "Export Plugins",
+    "description": "Backup and restore all your plugins, simple as that",
     "authors": [
         {
             "name": "Mikicrep",
@@ -9,6 +9,6 @@
     ],
     "main": "src/index.ts",
     "vendetta": {
-        "icon": "ic_download_24px"
+        "icon": "ic_badge_staff"
     }
 }

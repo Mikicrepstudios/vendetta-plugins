@@ -6,7 +6,7 @@ export default {
         logger.log("[Mikicrep test]: loaded");
     },
     onUnload: () => {
-        logger.log("[Mikicrep test] unloaded");
+        logger.log("[Mikicrep test]: unloaded");
     },
     settings: Settings,
 }
