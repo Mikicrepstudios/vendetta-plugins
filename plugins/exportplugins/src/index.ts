@@ -5,7 +5,7 @@ import Settings from "./Settings";
 export default {
     onLoad: () => {
         logger.log("[Mikicrep export plugins]: loaded");
-		logger.log("[Mikicrep export plugins]: " + vendetta.plugins.plugins.Plugin);
+		logger.log("[Mikicrep export plugins]: " + vendetta.plugins.plugins.Plugin.id);
     },
     onUnload: () => {
         logger.log("[Mikicrep export plugins]: unloaded");
