@@ -1,5 +1,5 @@
 import { logger } from "@vendetta";
-#import vendetta from "vendetta"
+//import vendetta from "vendetta"
 import Settings from "./Settings";
 
 export default {
